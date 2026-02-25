@@ -1,3 +1,3 @@
-const App = () => <p>Yo</p>
+const App = () => <p className={``}>Yo</p>
 
 export default App;

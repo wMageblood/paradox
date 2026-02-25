@@ -1,3 +1,13 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
 :root {
-  background-color: #ffffff
+  background-color: #ebeff3
+}
+
+
+@theme {
+  --color-inputForm: #f4f8fb;
+  --color-inputFormButton: #278293
+  --shadow-3xl: inset 0 -2px 2px hsla(0, 0%, 0%, 0.1)
 }
