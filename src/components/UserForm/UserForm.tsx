@@ -19,7 +19,7 @@ const UserForm = () => {
             </label>
           </div>
           <div>
-            <p className={`font-bold`}>Forgot your Password?</p>
+            <p className={`font-bold`}>Forgot your Password</p>
           </div>
         </div>
         <div>
