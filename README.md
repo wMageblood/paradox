@@ -1,6 +1,6 @@
 # Paradox
 
-👓
+We start on 03/02/2026.
 
 ## Dependencies:
 

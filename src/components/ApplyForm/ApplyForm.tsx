@@ -7,3 +7,5 @@ const ApplyForm = () => {
     </div>
   )
 }
+
+export default ApplyForm;
