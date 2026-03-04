@@ -30,7 +30,7 @@ const Login = () => {
         <div className="mx-10 py-6">
           <button onClick={() => handleClick()} className="bg-gray-neutral-500 w-full h-10.5 rounded-lg font-bold shadow-md">LOG IN</button>
         </div>
-        <div className="text-center pt-15 text-[12px] font-bold">
+        <div className="text-center tracking-tighter pt-15 text-[12px] font-bold">
           <p className="text-gray-neutral-400">ELV © 2026</p>
         </div>
       </div>

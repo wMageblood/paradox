@@ -1,9 +1,13 @@
+import Logo from "../../assets/logo.png"
+
 const ApplyForm = () => {
   return (
-    <div className={`flex justify-center items-center bg-green-500 w-lg h-lg`}>
-      <p className={`flex justify-center items-center`}>
-        Yo
-      </p>
+    <div className="flex items-center justify-center">
+      <div className="mx-10 my-10 h-screen w-screen bg-white rounded-lg shadow-2xl">
+        <div>
+          <img className="" height={500} width={500} src={`${Logo}`}></img>
+        </div>
+      </div>
     </div>
   )
 }
