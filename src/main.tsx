@@ -7,6 +7,5 @@ import Login from './components/Login/Login.tsx'
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ApplyForm />
-    <Login />
   </StrictMode>,
 )
