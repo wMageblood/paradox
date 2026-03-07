@@ -1,11 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import ApplyForm from './components/ApplyForm/ApplyForm.tsx'
-import Login from './components/Login/Login.tsx'
+import NavigationBar from './components/NavigationBar/NavigationBar.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ApplyForm />
+    <NavigationBar />
   </StrictMode>,
 )

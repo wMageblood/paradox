@@ -1,74 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 @import "tailwindcss";
 @plugin "@tailwindcss/forms";
 
 :root {
-  background-color: #ebeff3
+  /* font-family: "Geist", sans-serif; */
+  background-color: #ebeff3;
 }
 
-
 @theme {
+  /* PRIMARY COLORS */
+  --color-primary-background: #f4f8fb;
+
+  --color-primary-900: #203d53;
+  --color-primary-800: #1a4a72;
+  --color-primary-700: #2368a0;
+  --color-primary-600: #3183c7;
+  --color-primary-500: #62a2d8;
+  --color-primary-400: #a9d3f5;
+  --color-primary-300: #eff7ff;
+
+  /* NEUTRAL COLORS */
+  --color-gray-neutral-900: #232834;
+  --color-gray-neutral-800: #5f6a7b;
+  --color-gray-neutral-700: #8895a5;
+  --color-gray-neutral-600: #b7c6cf;
+  --color-gray-neutral-500: #cfd6df;
+  --color-gray-neutral-400: #e3e7ef;
+  --color-gray-neutral-300: #f9f9f9;
+  /* NEUTRAL COLORS */
 
   /* PRIMARY COLORS */
-    --color-primary-background: #f4f8fb;
-
-    --color-primary-900: #203d53;
-    --color-primary-800: #1a4a72;
-    --color-primary-700: #2368a0;
-    --color-primary-600: #3183c7;
-    --color-primary-500: #62a2d8;
-    --color-primary-400: #a9d3f5;
-    --color-primary-300: #eff7ff;
-
-    /* NEUTRAL COLORS */
-    --color-gray-neutral-900: #232834;
-    --color-gray-neutral-800: #5f6a7b;
-    --color-gray-neutral-700: #8895a5;
-    --color-gray-neutral-600: #b7c6cf;
-    --color-gray-neutral-500: #cfd6df;
-    --color-gray-neutral-400: #e3e7ef;
-    --color-gray-neutral-300: #f9f9f9;
-    /* NEUTRAL COLORS */
-
-  /* PRIMARY COLORS */
-
 
   /* ACCENT COLORS */
-    /* CYAN ACCENT COLORS */
-      --color-cyan-accent-900: #124544;
-      --color-cyan-accent-800: #1b655c;
-      --color-cyan-accent-700: #299187;
-      --color-cyan-accent-600: #3cada5;
-      --color-cyan-accent-500: #6dd7d3;
-      --color-cyan-accent-400: #a8efec;
-      --color-cyan-accent-300: #e6ffff;
-    /* CYAN ACCENT COLORS */
+  /* CYAN ACCENT COLORS */
+  --color-cyan-accent-900: #124544;
+  --color-cyan-accent-800: #1b655c;
+  --color-cyan-accent-700: #299187;
+  --color-cyan-accent-600: #3cada5;
+  --color-cyan-accent-500: #6dd7d3;
+  --color-cyan-accent-400: #a8efec;
+  --color-cyan-accent-300: #e6ffff;
+  /* CYAN ACCENT COLORS */
 
-    /* YELLOW ACCENT COLORS */
-      --color-yellow-accent-900: #5b480f;
-      --color-yellow-accent-800: #8a6c1e;
-      --color-yellow-accent-800: #caa53d;
-      --color-yellow-accent-600: #f4c964;
-      --color-yellow-accent-500: #fae39f;
-      --color-yellow-accent-400: #faf3d4;
-      --color-yellow-accent-300: #fffdf5;
-    /* YELLOW ACCENT COLORS */
+  /* YELLOW ACCENT COLORS */
+  --color-yellow-accent-900: #5b480f;
+  --color-yellow-accent-800: #8a6c1e;
+  --color-yellow-accent-800: #caa53d;
+  --color-yellow-accent-600: #f4c964;
+  --color-yellow-accent-500: #fae39f;
+  --color-yellow-accent-400: #faf3d4;
+  --color-yellow-accent-300: #fffdf5;
+  /* YELLOW ACCENT COLORS */
 
-    /* RED ACCENT COLORS */
-      --color-red-accent-900: #611719;
-      --color-red-accent-800: #8a1a17;
-      --color-red-accent-700: #b91f1e;
-      --color-red-accent-600: #dc2f2f;
-      --color-red-accent-500: #e26460;
-      --color-red-accent-400: #f3aaaa;
-      --color-red-accent-300: #fde8e9;
-    /* RED ACCENT COLORS */
+  /* RED ACCENT COLORS */
+  --color-red-accent-900: #611719;
+  --color-red-accent-800: #8a1a17;
+  --color-red-accent-700: #b91f1e;
+  --color-red-accent-600: #dc2f2f;
+  --color-red-accent-500: #e26460;
+  --color-red-accent-400: #f3aaaa;
+  --color-red-accent-300: #fde8e9;
+  /* RED ACCENT COLORS */
   /* ACCENT COLORS */
+
+  /* FONT WEIGHTS */
+  --font-weight-100: 100;
+  --font-weight-200: 200;
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+  --font-weight-900: 900;
+  /* FONT WEIGHTS */
 
   --shadow-3xl: inset 0 -2px 2px hsla(0, 0%, 0%, 0.1);
   --inset-shadow-md: inset 0 -1px 2px rgba(0, 0, 0, 0.25);
+  --inset-shadow-lg: inset 0 -2px 3px rgba(0, 0, 0, 0.35);
+  --font-Geist: "Geist", sans-serif;
 }
 
 .button-delete-primary {
-  @apply
-bg-red-500
+  @apply bg-red-500;
 }

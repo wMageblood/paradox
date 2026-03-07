@@ -12,7 +12,7 @@ const ApplyForm = () => {
         <div className="flex items-center justify-center pb-15">
           <img className="mt-10" src={`${Logo}`}></img>
         </div>
-        {formFields.map(({ formName, formDescription }) => (<FormInput formName={formName} formDescription={formDescription} />))}
+        {formFields.map(({ formName, formDescription, type }) => (<FormInput formName={formName} formDescription={formDescription} type={type} />))}
         <button onClick={() => handleClick()} className="bg-gray-neutral-500 w-md h-10.5 rounded-lg font-bold shadow-md mb-8">SEND</button>
       </div>
     </div>
