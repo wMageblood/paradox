@@ -3,7 +3,7 @@
 @plugin "@tailwindcss/forms";
 
 :root {
-  /* font-family: "Geist", sans-serif; */
+  font-family: "Geist", sans-serif;
   background-color: #ebeff3;
 }
 

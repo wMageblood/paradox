@@ -1,7 +1,7 @@
 const NavigationBar = () => {
   return (
     <div className="mt-10 flex items-center justify-center">
-      <nav className="*:font-Geist *:font-500 inset-shadow-lg mx-10 flex w-1/2 justify-between rounded-sm bg-red-500 py-4 *:px-7 *:hover:underline">
+      <nav className="*:font-500 inset-shadow-lg bg-gray-neutral-400 mx-10 flex justify-between rounded-sm py-4 *:px-7 *:hover:underline">
         <a className="" href="/about">
           About
         </a>
