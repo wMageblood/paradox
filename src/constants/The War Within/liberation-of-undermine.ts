@@ -1,4 +1,4 @@
-const liberationOfUndermine = [
+const LIBERATION_OF_UNDERMINE = [
   {bossName: "bossName1", order: 1},
   {bossName: "bossName2", order: 2},
   {bossName: "bossName3", order: 3},
@@ -9,4 +9,4 @@ const liberationOfUndermine = [
   {bossName: "bossName8", order: 8},
 ]
 
-export default liberationOfUndermine;
+export default LIBERATION_OF_UNDERMINE;

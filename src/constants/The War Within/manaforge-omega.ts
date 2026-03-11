@@ -1,4 +1,4 @@
-const manaforgeOmega = [
+const MANAFORGE_OMEGA = [
   {bossName: "bossName1", order: 1},
   {bossName: "bossName2", order: 2},
   {bossName: "bossName3", order: 3},
@@ -10,4 +10,4 @@ const manaforgeOmega = [
   {bossName: "bossName9", order: 9},
 ]
 
-export default manaforgeOmega;
+export default MANAFORGE_OMEGA;

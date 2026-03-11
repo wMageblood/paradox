@@ -1,4 +1,4 @@
-const nerubarPalace = [
+const NERUBAR_PALACE = [
   {bossName: "bossName1", order: 1},
   {bossName: "bossName2", order: 2},
   {bossName: "bossName3", order: 3},
@@ -9,4 +9,4 @@ const nerubarPalace = [
   {bossName: "bossName8", order: 8},
 ]
 
-export default nerubarPalace;
+export default NERUBAR_PALACE;
