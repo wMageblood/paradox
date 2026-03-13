@@ -1,0 +1,6 @@
+export { default as alleria } from "./inv_120_raid_voidspire_alleria.jpg"
+export { default as dragonDuo} from "./inv_120_raid_voidspire_dragonduo.jpg"
+export { default as hostGeneral } from "./inv_120_raid_voidspire_hostgeneral.jpg"
+export { default as kaiju } from "./inv_120_raid_voidspire_kaiju.jpg"
+export { default as paladinTrio } from "./inv_120_raid_voidspire_paladintrio.jpg"
+export { default as salhadaar } from "./inv_120_raid_voidspire_salhadaar.jpg"

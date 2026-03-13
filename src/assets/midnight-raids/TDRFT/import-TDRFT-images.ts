@@ -1,0 +1,1 @@
+export { default as chimaerus } from "./inv_120_raid_dreamwell_malformedmanifestation.jpg"

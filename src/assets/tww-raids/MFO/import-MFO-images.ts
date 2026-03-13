@@ -1,0 +1,8 @@
+export {default as plexus} from "../MFO/inv_112_achievement_raid_automaton.jpg"
+export {default as soulbinder} from "../MFO/inv_112_achievement_raid_binder.jpg"
+export {default as dhcouncil} from "../MFO/inv_112_achievement_raid_dhcouncil.jpg"
+export {default as dimensius} from "../MFO/inv_112_achievement_raid_dimensius.jpg"
+export {default as araz} from "../MFO/inv_112_achievement_raid_engineer.jpg"
+export {default as fractillus} from "../MFO/inv_112_achievement_raid_glasselemental.jpg"
+export {default as salhadaar} from "../MFO/inv_112_achievement_raid_salhadaar.jpg"
+export {default as loomithar} from "../MFO/inv_112_achievement_raid_silkworm.jpg"
