@@ -1,78 +1,67 @@
 import { useState } from "react";
-import MANAFORGE_OMEGA from "../../constants/The War Within/MANAFORGE_OMEGA";
-import dragonflightRaids from "../../constants/Dragonflight/dragonflightRaids.ts";
+import EXPANSIONS from "../../constants/Ascended/EXPANSIONS";
+import {
+  VAULT_OF_THE_INCARNATES,
+  ABERRUS_THE_SHADOWED_CRUCIBLE,
+  AMIRDRASSIL_THE_DREAMS_HOPE,
+} from "../../constants/Dragonflight/dragonflightRaids";
 
 const About = () => {
-  const [dragonflightRaidInfo, setDragonflightRaidInfo] = useState(false);
-  const [theWarWithinRaidInfo, setTheWarWithinRaidInfo] = useState(false);
-  const [midnightRaidInfo, setMidnightRaidInfo] = useState(false);
-  const [raidBreakdown, setRaidBreakdown] = useState(false);
+  const [visibility, setVisibility] = useState(false);
 
-  const handleDragonflightClick = () => {
-    setDragonflightRaidInfo(!dragonflightRaidInfo);
-    setMidnightRaidInfo(false);
-    setTheWarWithinRaidInfo(false);
-  };
-
-  const handleTheWarWithinClick = () => {
-    setTheWarWithinRaidInfo(!theWarWithinRaidInfo);
-    setMidnightRaidInfo(false);
-    setDragonflightRaidInfo(false);
-  };
-
-  const handleMidnightClick = () => {
-    setMidnightRaidInfo(!midnightRaidInfo);
-    setTheWarWithinRaidInfo(false);
-    setDragonflightRaidInfo(false);
-  };
-
-  const handleRaidBreakdown = () => {
-    setRaidBreakdown(!raidBreakdown);
-  };
+  const handleVisibility = () => setVisibility(!visibility);
 
   return (
     <div className="">
-      <div className="">
-        <button
-          onClick={() => handleDragonflightClick()}
-          className="rounded-lg bg-red-400 px-4 py-2"
-        >
-          Dragonflight
-        </button>
-        <button
-          onClick={() => handleTheWarWithinClick()}
-          className="rounded-lg bg-amber-400 px-4 py-2"
-        >
-          The War Within
-        </button>
-        <button
-          onClick={() => handleMidnightClick()}
-          className="rounded-lg bg-purple-400 px-4 py-2"
-        >
-          Midnight
-        </button>
+      <div>
+        {EXPANSIONS.map(({ played }) => (
+          <button
+            onClick={() => handleVisibility()}
+            className="font-600 rounded-lg bg-white px-2 py-4 uppercase"
+          >
+            {played}
+          </button>
+        ))}
       </div>
-      {dragonflightRaidInfo === true
-        ? dragonflightRaids.map(({ raidName, bosses }) => (
-            <div>
-              <button
-                className="mx-5 rounded-lg bg-blue-500 px-4 py-2"
-                onClick={() => handleRaidBreakdown()}
-              >
-                {raidName}
-              </button>
-              {raidBreakdown === true
-                ? bosses.map((boss) => <p>{boss}</p>)
-                : null}
+      <div className="flex">
+        {visibility === true ? (
+          VAULT_OF_THE_INCARNATES.map(({ image }) => (
+            <div className="mx-px">
+              <img className="border border-black" width={35} src={image} />
             </div>
           ))
-        : null}
-      {theWarWithinRaidInfo === true ? (
-        <p>nerubar, liberation, manafortge</p>
-      ) : null}
-      {midnightRaidInfo === true
-        ? MANAFORGE_OMEGA.map(({ bossName }) => <p>{bossName}</p>)
-        : null}
+        ) : (
+          <p>returning false</p>
+        )}
+      </div>
+      <div>
+        <p>Aberrus:</p>
+      </div>
+      <div className="flex">
+        {visibility === true ? (
+          ABERRUS_THE_SHADOWED_CRUCIBLE.map(({ image }) => (
+            <div className="mx-px">
+              <img className="border border-black" width={35} src={image} />
+            </div>
+          ))
+        ) : (
+          <p>returning false</p>
+        )}
+      </div>
+      <div>
+        <p>Amirdrassil</p>
+      </div>
+      <div className="flex">
+        {visibility === true ? (
+          AMIRDRASSIL_THE_DREAMS_HOPE.map(({ image }) => (
+            <div className="mx-px">
+              <img className="border border-black" width={35} src={image} />
+            </div>
+          ))
+        ) : (
+          <p>returning false</p>
+        )}
+      </div>
     </div>
   );
 };

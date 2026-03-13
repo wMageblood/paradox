@@ -1,0 +1,9 @@
+export { default as amalgamation } from "./inv_achievement_raiddragon_amalgamationchamber.jpg";
+export { default as forgottenexperiments } from "./inv_achievement_raiddragon_forgottenexperiments.jpg";
+export { default as kazzara } from "./inv_achievement_raiddragon_kazzara.jpg";
+export { default as magmorax } from "./inv_achievement_raiddragon_magmorax.jpg";
+export { default as neltharion } from "./inv_achievement_raiddragon_neltharion.jpg";
+export { default as rashok } from "./inv_achievement_raiddragon_rashok.jpg";
+export { default as sarkareth } from "./inv_achievement_raiddragon_sarkareth.jpg";
+export { default as zaqali } from "./inv_achievement_raiddragon_zaqaliassault.jpg";
+export { default as zskarn } from "./inv_achievement_raiddragon_zskarn.jpg";
