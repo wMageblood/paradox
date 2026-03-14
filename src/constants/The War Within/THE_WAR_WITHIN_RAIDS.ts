@@ -1,6 +1,6 @@
-import * as NP from "../../assets/tww-raids/NP/import-NP-images"
-import * as LOU from "../../assets/tww-raids/LoU/import-LoU-images"
-import * as MFO from "../../assets/tww-raids/MFO/import-MFO-images"
+import * as NP from "../../assets/raids/tww-raids/NP/import-NP-images"
+import * as LOU from "../../assets/raids/tww-raids/LoU/import-LoU-images"
+import * as MFO from "../../assets/raids/tww-raids/MFO/import-MFO-images"
 
 export const NERUBAR_PALACE = [
   {boss: "feed boss", order: 1, image: NP.ulgrax},

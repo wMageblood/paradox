@@ -1,6 +1,6 @@
-import * as MOQD from "../../assets/midnight-raids/MoQD/import-MoQD-images"
-import * as TVSP from "../../assets/midnight-raids/TVSP/import-TVSP-images"
-import * as TDRFT from "../../assets/midnight-raids/TDRFT/import-TDRFT-images"
+import * as MOQD from "../../assets/raids/midnight-raids/MoQD/import-MoQD-images"
+import * as TVSP from "../../assets/raids/midnight-raids/TVSP/import-TVSP-images"
+import * as TDRFT from "../../assets/raids/midnight-raids/TDRFT/import-TDRFT-images"
 
 export const THE_VOIDSPIRE = [
   {boss: "boring boss", order: 1, image: TVSP.hostGeneral},

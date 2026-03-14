@@ -1,6 +1,6 @@
-import * as VOTI from "../../assets/dragonflight-raids/VotI/import-voti-images"
-import * as ABERRUS from "../../assets/dragonflight-raids/AtSC/import-aberrus-images"
-import * as AMIRDRASSIL from "../../assets/dragonflight-raids/AtDH/import-amirdrassil-images"
+import * as VOTI from "../../assets/raids/dragonflight-raids/VotI/import-voti-images"
+import * as ABERRUS from "../../assets/raids/dragonflight-raids/AtSC/import-aberrus-images"
+import * as AMIRDRASSIL from "../../assets/raids/dragonflight-raids/AtDH/import-amirdrassil-images"
 
 export const VAULT_OF_THE_INCARNATES = [
   {boss: "red humanoid dragon", order: 1, image: VOTI.eranog},
