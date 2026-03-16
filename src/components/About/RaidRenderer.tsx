@@ -15,6 +15,7 @@ const RaidRenderer = (expansionProperties: ExpansionProp) => {
   <div className="m-4">
     <button onClick={() => handleClick()} className="px-2 py-4 rounded-sm bg-red-500">{expansionProperties.expansionName|| "expansionName"}</button>
     <div>{visibility && <h2>{ expansionProperties.raidName ||"raidName"}</h2>}</div>
+    <p>aczino</p>
  </div>
  )
 };
