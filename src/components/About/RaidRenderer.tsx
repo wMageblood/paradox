@@ -1,23 +1,38 @@
 import { useState } from "react";
+import DRAGONFLIGHT_RAIDS from "../../constants/Dragonflight/DRAGONFLIGHT_RAIDS";
+import THE_WAR_WITHIN_RAIDS from "../../constants/The War Within/THE_WAR_WITHIN_RAIDS";
+import MIDNIGHT_RAIDS from "../../constants/Midnight/MIDNIGHT_RAIDS";
 
-interface ExpansionProp {
-  expansionName: string;
-  raidName?: string;
-}
 
-const RaidRenderer = (expansionProperties: ExpansionProp) => {
+const RaidRenderer = () => {
 
-  const [visibility, setVisibility] = useState(false)
 
-  const handleClick = () => setVisibility(!visibility);
+  const [dragonflightVisibility, setDragonflightVisibility] = useState(false)
+  const [twwVisibility, setTwwVisibility] = useState(false)
+  const [midnightVisibility, setMidnightVisibility] = useState(false)
+
+
+  const handleDragonflightClick = () => setDragonflightVisibility(!dragonflightVisibility);
+  const handleTwwflightClick = () => setTwwVisibility(!twwVisibility);
+  const handleMidnightClick = () => setMidnightVisibility(!midnightVisibility);
+
 
  return (
-  <div className="m-4">
-    <button onClick={() => handleClick()} className="px-2 py-4 rounded-sm bg-red-500">{expansionProperties.expansionName|| "expansionName"}</button>
-    <div>{visibility && <h2>{ expansionProperties.raidName ||"raidName"}</h2>}</div>
-    <p>aczino</p>
- </div>
- )
-};
+  <div className="m-5 bg-blue-500">
+      <div className="flex justify-center items-center">
+        <button onClick={() => handleDragonflightClick()} className="px-2 py-4 mr-5 rounded-sm bg-red-500">Dragonflight</button>
+        <button onClick={() => handleTwwflightClick()} className="px-2 py-4 rounded-sm bg-red-500">The War Within</button>
+        <button onClick={() => handleMidnightClick()} className="px-2 py-4 ml-5 rounded-sm bg-red-500">Midnight</button>
+      </div>
+      <div className="bg-green-500 flex p-3 w-full justify-center items-center">
+        <div className="*:font-Geist font-500">
+          {dragonflightVisibility ? DRAGONFLIGHT_RAIDS.map(({raidName, images}) => (<div className="leading-5">{raidName}<div className="flex mb-3">{images.map((img, idx) => (<img className="border border-black mx-px" key={idx} src={img} width={35} />))}</div></div>)) : null}
+          {twwVisibility ? THE_WAR_WITHIN_RAIDS.map(({raidName, images}) => (<div className="leading-5">{raidName}<div className="flex mb-3">{images.map((img, idx) => (<img className="border border-black mx-px" key={idx} src={img} width={35} />))}</div></div>)) : null}
+          {midnightVisibility ? MIDNIGHT_RAIDS.map(({raidName, images}) => (<div className="leading-5">{raidName}<div className="flex mb-3">{images.map((img, idx) => (<img className="border border-black mx-px" key={idx} src={img} width={35} />))}</div></div>)) : null}
+        </div>
+    </div>
+  </div>
+    )
+  };
 
-export default RaidRenderer
+  export default RaidRenderer;
