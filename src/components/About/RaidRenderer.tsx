@@ -24,7 +24,7 @@ const RaidRenderer = () => {
         <button onClick={() => handleTwwflightClick()} className="px-2 py-4 rounded-sm bg-red-500">The War Within</button>
         <button onClick={() => handleMidnightClick()} className="px-2 py-4 ml-5 rounded-sm bg-red-500">Midnight</button>
       </div>
-      <div className="bg-slate-500-500 flex p-3 w-full justify-center items-center">
+      <div className="bg-red-500 flex p-3 w-full justify-center items-center">
         <div className="*:font-Geist font-500">
           {dragonflightVisibility ? DRAGONFLIGHT_RAIDS.map(({raidName, images}) => (<div className="leading-5">{raidName}<div className="flex mb-3">{images.map((img, idx) => (<img className="border border-black mx-px" key={idx} src={img} width={35} />))}</div></div>)) : null}
           {twwVisibility ? THE_WAR_WITHIN_RAIDS.map(({raidName, images}) => (<div className="leading-5">{raidName}<div className="flex mb-3">{images.map((img, idx) => (<img className="border border-black mx-px" key={idx} src={img} width={35} />))}</div></div>)) : null}
