@@ -37,14 +37,14 @@ const handlePvpToggle = () => {
    <div>
     <img className="px-5 py-2 mt-5" src={anima} />
    </div>
-   <div className="*:bg-blue-500 flex *:px-5 *:py-2 my-5">
-    <button className="w-full ml-3 rounded-l-sm">PvE</button>
-    <button className="w-full mr-3 rounded-r-sm">PvP</button>
+   <div className="flex *:px-5 *:py-2 my-5">
+    <button onClick={() => handlePveToggle()} className={`w-full ml-3 rounded-l-sm ${pveToggle ? "bg-green-500 text-red-500" : "bg-white text-black"}`}>PvE</button>
+    <button onClick={() => handlePvpToggle()} className={`w-full mr-3 rounded-r-sm ${pvpToggle ? "bg-green-500 text-red-500" : "bg-white text-black"}`}>PvP</button>
    </div>
    <div>
     <ul>
      {sidebarItems.map(({ name, href, key }) => (
-      <li key={key} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500" : "bg-red-500"}`}>
+      <li key={key} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}>
        <a className="ml-2" href={href}>
         {name}
        </a>
