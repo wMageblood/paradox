@@ -19,7 +19,7 @@ const Sidebar = () => {
    <div>
     <img src={anima} />
    </div>
-   <div className="*:bg-blue-500 flex *:px-5 *:py-2 my-5">
+   <div className="*:bg-blue-500 flex *:px-5 *:py-2 my-5 *:hover:bg-green-500">
     <button className="w-full ml-3 rounded-l-sm">PvE</button>
     <button className="w-full mr-3 rounded-r-sm">PvP</button>
    </div>
