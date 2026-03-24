@@ -3,22 +3,11 @@ import anima from "../../assets/logo.png";
 
 const Sidebar = () => {
 
- const [pveToggle, setPveToggle] = useState(true);
- const [pvpToggle, setPvpToggle] = useState(false);
 
- const handlePveToggle = () => {
-  setPvpToggle(false)
-  setPveToggle(true)
-};
+const [visibility, setVisibility] = useState<'pve' | 'pvp'>('pve')
 
 
-const handlePvpToggle = () => {
-  setPveToggle(false)
-  setPvpToggle(true);
- };
-
-
- const sidebarItems = [
+ const pveSidebarItems = [
   { name: "Home", href: "/", key: 1 },
   { name: "Looking for Group", href: "/looking-for-group", key: 2 },
   { name: "Blue Tracker", href: "/blue-tracker", key: 3 },
@@ -31,25 +20,34 @@ const handlePvpToggle = () => {
   { name: "Community", href: "/community", key: 10 },
  ];
 
+ const pvpSidebarItems = [
+  { name: "Home", href: "/", key: 1 },
+  { name: "Looking for Group PVP", href: "/looking-for-group", key: 2 },
+  { name: "Blue Tracker PVP", href: "/blue-tracker", key: 3 },
+  { name: "Class Changes PVP", href: "/class-changes", key: 4 },
+  { name: "PvE Guides PVP", href: "/pve-guides", key: 5 },
+  { name: "Leaderboards PVP", href: "/leaderboards", key: 6 },
+  { name: "Stats PVP", href: "/stats", key: 7 },
+  { name: "Tier List PVP", href: "/tier-list", key: 8 },
+  { name: "Tournaments PVP", href: "/tournaments", key: 9 },
+  { name: "Community PVP", href: "/community", key: 10 },
+ ];
+
 
  return (
-  <div className="fixed top-0 left-0 flex h-full w-64 flex-col bg-red-500 border-r border-black z-50">
+  <div className="fixed top-0 left-0 w-64 h-full border-r z-50 flex flex-col bg-red-500 transition-transform duration-300 -translate-x-full lg:translate-x-0">
    <div>
     <img className="px-5 py-2 mt-5" src={anima} />
    </div>
    <div className="flex *:px-5 *:py-2 my-5">
-    <button onClick={() => handlePveToggle()} className={`w-full ml-3 rounded-l-sm ${pveToggle ? "bg-green-500 text-red-500" : "bg-white text-black"}`}>PvE</button>
-    <button onClick={() => handlePvpToggle()} className={`w-full mr-3 rounded-r-sm ${pvpToggle ? "bg-green-500 text-red-500" : "bg-white text-black"}`}>PvP</button>
+    <button onClick={() => setVisibility('pve')} className={`w-full ml-3 rounded-l-sm ${visibility === 'pve' ? "bg-green-500 text-red-500" : "bg-gray-600 text-gray-950"}`}>PvE</button>
+    <button onClick={() => setVisibility('pvp')} className={`w-full mr-3 rounded-r-sm ${visibility === 'pvp' ? "bg-green-500 text-red-500" : "bg-gray-600 text-gray-950"}`}>PvP</button>
    </div>
    <div>
     <ul>
-     {sidebarItems.map(({ name, href, key }) => (
-      <li key={key} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}>
-       <a className="ml-2" href={href}>
-        {name}
-       </a>
-      </li>
-     ))}
+      {visibility === 'pve'
+        ? (pveSidebarItems.map(({name, href, key}) => <li key={key} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}><a className={`ml-2`} href={href}>{name}</a></li>))
+        : (pvpSidebarItems.map(({name, href, key}) => <li key={key} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}><a className="ml-2" href={href}>{name}</a></li>))}
     </ul>
    </div>
    <div className="text-center mt-5 text-green-500 hover:text-green-300">❤︎ Support this site</div>
