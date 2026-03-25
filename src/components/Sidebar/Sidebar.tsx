@@ -53,7 +53,7 @@ const [visibility, setVisibility] = useState<'pve' | 'pvp'>('pve')
    <div className="text-center mt-5 text-green-500 hover:text-green-300">❤︎ Support this site</div>
     <footer className="mt-auto text-center mb-5 border-t">
       <div className="mt-3">
-        Discord & X
+        Discord & X & X
         <div className="text-sm mt-2 text-gray-500">
           C Paradox @ 2026
         </div>
