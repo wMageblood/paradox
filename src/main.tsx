@@ -1,9 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Sidebar from "./components/Sidebar/Sidebar";
-import Pve from "./components/PvE/PvE.tsx"
-import SearchBar from "./components/SearchBar/SearchBar.tsx";
+import Sidebar from "./features/sidebar/components/Sidebar.tsx";
+import Pve from "./features/pve/components/PvE.tsx"
+import SearchBar from "./components/ui/SearchBar.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

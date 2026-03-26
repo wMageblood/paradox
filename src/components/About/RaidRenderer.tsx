@@ -1,7 +1,7 @@
 import { useState } from "react";
-import DRAGONFLIGHT_RAIDS from "../../constants/Dragonflight/DRAGONFLIGHT_RAIDS";
-import THE_WAR_WITHIN_RAIDS from "../../constants/The War Within/THE_WAR_WITHIN_RAIDS";
-import MIDNIGHT_RAIDS from "../../constants/Midnight/MIDNIGHT_RAIDS";
+import DRAGONFLIGHT_RAIDS from "../../constants/dragonflight/raids";
+import THE_WAR_WITHIN_RAIDS from "../../constants/warWithin/raids";
+import MIDNIGHT_RAIDS from "../../constants/midnight/raids";
 
 
 const RaidRenderer = () => {

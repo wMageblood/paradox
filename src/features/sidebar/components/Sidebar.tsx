@@ -1,5 +1,5 @@
 import { useState } from "react";
-import anima from "../../assets/logo.png";
+import anima from "../../../assets/logo.png";
 
 const Sidebar = () => {
 
