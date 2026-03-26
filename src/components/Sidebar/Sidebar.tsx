@@ -4,7 +4,7 @@ import anima from "../../assets/logo.png";
 const Sidebar = () => {
 
 
-const [visibility, setVisibility] = useState<'pve' | 'pvp'>('pve')
+const [visibility, setVisibility] = useState<'pve' | 'pvp'>('pve');
 
 
  const pveSidebarItems = [
@@ -20,19 +20,6 @@ const [visibility, setVisibility] = useState<'pve' | 'pvp'>('pve')
   { name: "Community", href: "/community", key: 10 },
  ];
 
- const pvpSidebarItems = [
-  { name: "Home", href: "/", key: 1 },
-  { name: "Looking for Group PVP", href: "/looking-for-group", key: 2 },
-  { name: "Blue Tracker PVP", href: "/blue-tracker", key: 3 },
-  { name: "Class Changes PVP", href: "/class-changes", key: 4 },
-  { name: "PvE Guides PVP", href: "/pve-guides", key: 5 },
-  { name: "Leaderboards PVP", href: "/leaderboards", key: 6 },
-  { name: "Stats PVP", href: "/stats", key: 7 },
-  { name: "Tier List PVP", href: "/tier-list", key: 8 },
-  { name: "Tournaments PVP", href: "/tournaments", key: 9 },
-  { name: "Community PVP", href: "/community", key: 10 },
- ];
-
 
  return (
   <div className="fixed top-0 left-0 w-64 h-full border-r z-50 flex flex-col bg-red-500 transition-transform duration-300 -translate-x-full lg:translate-x-0">
@@ -45,9 +32,7 @@ const [visibility, setVisibility] = useState<'pve' | 'pvp'>('pve')
    </div>
    <div>
     <ul>
-      {visibility === 'pve'
-        ? (pveSidebarItems.map(({name, href, key}) => <li key={key} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}><a className={`ml-2`} href={href}>{name}</a></li>))
-        : (pvpSidebarItems.map(({name, href, key}) => <li key={key} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}><a className="ml-2" href={href}>{name}</a></li>))}
+      {pveSidebarItems.map(({name, href, key}) => <li key={key} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}><a className={`ml-2`} href={href}>{name}</a></li>)}
     </ul>
    </div>
    <div className="text-center mt-5 text-green-500 hover:text-green-300">❤︎ Support this site</div>
