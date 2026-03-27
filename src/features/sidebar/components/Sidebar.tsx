@@ -1,24 +1,15 @@
-import { useState } from "react";
 import anima from "../../../assets/logo.png";
+import { pveSidebar } from "../../../constants/routes";
 
-const Sidebar = () => {
+type View = 'pve' | 'pvp';
+
+interface SidebarProps {
+  visibility: View;
+  setVisibility: React.Dispatch<React.SetStateAction<View>>;
+}
 
 
-const [visibility, setVisibility] = useState<'pve' | 'pvp'>('pve');
-
-
- const pveSidebarItems = [
-  { name: "Home", href: "/", key: 1 },
-  { name: "Looking for Group", href: "/looking-for-group", key: 2 },
-  { name: "Blue Tracker", href: "/blue-tracker", key: 3 },
-  { name: "Class Changes", href: "/class-changes", key: 4 },
-  { name: "PvE Guides", href: "/pve-guides", key: 5 },
-  { name: "Leaderboards", href: "/leaderboards", key: 6 },
-  { name: "Stats", href: "/stats", key: 7 },
-  { name: "Tier List", href: "/tier-list", key: 8 },
-  { name: "Tournaments", href: "/tournaments", key: 9 },
-  { name: "Community", href: "/community", key: 10 },
- ];
+const Sidebar = ({ visibility, setVisibility }: SidebarProps) => {
 
 
  return (
@@ -32,7 +23,7 @@ const [visibility, setVisibility] = useState<'pve' | 'pvp'>('pve');
    </div>
    <div>
     <ul>
-      {pveSidebarItems.map(({name, href, key}) => <li key={key} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}><a className={`ml-2`} href={href}>{name}</a></li>)}
+      {pveSidebar.map(({name, href}) => <li key={href} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}><a className={`ml-2`} href={href}>{name}</a></li>)}
     </ul>
    </div>
    <div className="text-center mt-5 text-green-500 hover:text-green-300">❤︎ Support this site</div>

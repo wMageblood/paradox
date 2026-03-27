@@ -1,5 +1,7 @@
 import Sidebar from "../../sidebar/components/Sidebar";
 
-const Pve = () => <p className="ml-2">Pve Section Pve</p>
+
+
+const Pve = () => <p>this is pve content showing up</p>
 
 export default Pve;

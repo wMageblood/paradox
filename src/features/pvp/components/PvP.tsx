@@ -1,3 +1,3 @@
-const Pvp = () => <p>PvP Section PvP</p>
+const Pvp = () => <p>this is pvp content showing up</p>
 
 export default Pvp;
