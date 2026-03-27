@@ -1,5 +1,5 @@
 import anima from "../../../assets/logo.png";
-import { pveSidebar } from "../../../constants/routes";
+import PVESIDEBAR from "../../../constants/routes";
 
 type View = 'pve' | 'pvp';
 
@@ -23,7 +23,7 @@ const Sidebar = ({ visibility, setVisibility }: SidebarProps) => {
    </div>
    <div>
     <ul>
-      {pveSidebar.map(({name, href}) => <li key={href} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}><a className={`ml-2`} href={href}>{name}</a></li>)}
+      {PVESIDEBAR.map(({name, href}) => <li key={href} className={`mx-3 py-2.5 hover:bg-blue-500 hover:text-white hover:rounded-sm ${window.location.pathname === href ? "bg-green-500 rounded-sm" : "bg-red-500"}`}><a className={`ml-2`} href={href}>{name}</a></li>)}
     </ul>
    </div>
    <div className="text-center mt-5 text-green-500 hover:text-green-300">❤︎ Support this site</div>

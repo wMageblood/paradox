@@ -1,4 +1,4 @@
-export const pveSidebar = [
+const PVESIDEBAR = [
   { name: "Home", href: "/" },
   { name: "Looking for Group", href: "/looking-for-group" },
   { name: "Blue Tracker", href: "/blue-tracker" },
@@ -10,3 +10,5 @@ export const pveSidebar = [
   { name: "Tournaments", href: "/tournaments" },
   { name: "Community", href: "/community" },
 ] as const;
+
+export default PVESIDEBAR;
