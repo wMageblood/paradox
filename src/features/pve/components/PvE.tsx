@@ -1,6 +1,7 @@
 import mainLogo from "../../../assets/anima.png"
 import SearchBar from "../../../components/ui/SearchBar";
 import TABS from "../../../constants/tabs.ts"
+import BlueTracker from "../../blue-tracker/components/BlueTracker.tsx";
 
 const Pve = () => {
 
@@ -14,6 +15,9 @@ const Pve = () => {
       </div>
       <div className="flex justify-center items-center mt-5 gap-3">
           {TABS.map(({icon, text, href}) => <a href={href} className="bg-primary-900 -transform-transition duration-300 hover:bg-primary-900/50 rounded-full px-4 py-1 text-white border border-neutral-500 ">{`${icon} ${text}`}</a>)}
+      </div>
+      <div>
+        <BlueTracker />
       </div>
     </div>
   );
