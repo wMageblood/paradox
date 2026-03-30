@@ -1,17 +1,15 @@
 import BluePost from "../../../components/ui/BluePost";
+import BLUE_POSTS from "../../../constants/bluePost";
 
 const BlueTracker = () => {
   return (
-    <div className=" bg-amber-500 mr-2">
-      <div className="mt-15 flex justify-between items-center bg-red-500">
+    <div className="mx-25 rounded-sm">
+      <div className="mt-15 flex justify-between items-center">
         <h1 className="text-2xl font-500"> Blue Tracker: </h1>
         <a className="text-sm text-primary-600">{`View All ->`}</a>
       </div>
-      <div className="grid grid-cols-2 mt-5 bg-blue-500 p-2 rounded-sm overflow-hidden">
-        <BluePost tags="warrior mage druid" author="Kyveza" age="02/07/2026" title="The easiest tier since Emerald Nightmare"  />
-        <BluePost tags="warrior mage druid" author="Kyveza" age="02/07/2026" title="The easiest tier since Emerald Nightmare"  />
-        <BluePost tags="warrior mage druid" author="Kyveza" age="02/07/2026" title="The easiest tier since Emerald Nightmare"  />
-        <BluePost tags="warrior mage druid" author="Kyveza" age="02/07/2026" title="The easiest tier since Emerald Nightmare"  />
+      <div className="grid grid-cols-2 mt-5 p-2 rounded-sm">
+        {BLUE_POSTS.map(({title, author, age, href, tags}) => <BluePost title={title} author={author} age={age} href={href} tags={tags} />)}
       </div>
     </div>
   );
