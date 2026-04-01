@@ -75,6 +75,22 @@
   --font-weight-900: 900;
   /* FONT WEIGHTS */
 
+  /* CLASS COLORS */
+  --color-deathknight: #C41E3A;
+  --color-demonhunter: #A330C9;
+  --color-druid: #FF7C0A;
+  --color-evoker: #33937F;
+  --color-hunter: #AAD372;
+  --color-mage: #3FC7EB;
+  --color-monk: #00FF98;
+  --color-paladin: #F48CBA;
+  --color-priest: #FFFFFF;
+  --color-rogue: #FFF468;
+  --color-shaman: #0070DD;
+  --color-warlock: #8788EE;
+  --color-warrior: #C69B6D;
+  /* CLASS COLORS */
+
   --shadow-3xl: inset 0 -2px 2px hsla(0, 0%, 0%, 0.1);
   --inset-shadow-md: inset 0 -1px 2px rgba(0, 0, 0, 0.25);
   --inset-shadow-lg: inset 0 -2px 3px rgba(0, 0, 0, 0.35);
