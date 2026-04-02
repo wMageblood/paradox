@@ -10,6 +10,8 @@
 @theme {
   /* PRIMARY COLORS */
   --color-primary-background: #f4f8fb;
+  --color-secondary-background: #0d1117;
+  --color-third-background-: #141a21;
 
   --color-primary-900: #203d53;
   --color-primary-800: #1a4a72;
@@ -76,8 +78,8 @@
   /* FONT WEIGHTS */
 
   /* CLASS COLORS */
-  --color-deathknight: #C41E3A;
-  --color-demonhunter: #A330C9;
+  --color-dk: #C41E3A;
+  --color-dh: #A330C9;
   --color-druid: #FF7C0A;
   --color-evoker: #33937F;
   --color-hunter: #AAD372;
