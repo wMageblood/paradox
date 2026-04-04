@@ -17,7 +17,7 @@ const BluePost = ({title, tags, author, age, href}: BluePostProps) => {
         <div className="flex p-4">
           <img src={questionMark} className=" aspect-3/2 w-15 rounded-sm"/>
           <div className="truncate">
-            <a href={href} className="font-500 ml-2 text-white">{title}</a>
+            <a href={href} className="font-500 ml-2 text-white bg-red-500">{title}</a>
             <div className="ml-2 flex gap-1">
               {tags!.map((tag) => <a href={tag} className={`${tagStyles[tag]} px-2 py-1`}>{tag}</a>)}
               <a className="py-1" href="#">{author}</a>
