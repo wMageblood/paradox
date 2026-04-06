@@ -12,7 +12,4 @@ export const tagStyles: Record<string, string> = {
   dk: "bg-dk/35 text-dk uppercase tracking-tighter font-600 text-sm rounded-sm px-2",
   evoker: "bg-evoker/35 text-evoker uppercase tracking-tighter font-600 text-sm rounded-sm",
   monk: "bg-monk/35 text-monk uppercase tracking-tighter font-600 text-sm rounded-sm",
-
-  // fallback
-  default: "bg-gray-500 uppercase tracking-tighter font-600 text-sm p-1",
 };
