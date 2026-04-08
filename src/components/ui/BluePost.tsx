@@ -19,7 +19,7 @@ const BluePost = ({title, tags, author, age, href}: BluePostProps) => {
             <img className="w-24 h-14 rounded-lg" src={questionMark} />
           </div>
           <div className="inline-block">
-            <div className="mx-2 font-500">
+            <div className="mx-2 font-500 text-white">
               {title}
             </div>
             <div className="mx-1 flex">
