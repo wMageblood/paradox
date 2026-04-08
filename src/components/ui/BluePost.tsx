@@ -13,19 +13,19 @@ type BluePostProps = Partial<{
 
 const BluePost = ({title, tags, author, age, href}: BluePostProps) => {
   return (
-      <div className="mt-5">
+      <div className="">
         <div className="bg-slate-700 px-6 py-3 flex">
           <div>
-            <img className="w-32 h-20 rounded-lg" src={questionMark} />
+            <img className="w-24 h-14 rounded-lg" src={questionMark} />
           </div>
           <div className="inline-block">
-            <div>
+            <div className="mx-2 font-500">
               {title}
             </div>
-            <div className="">
-              {tags!.map((tag) => <a className={`mx-1 px-2 py-1 ${tagStyles[tag]}`}>{tag}</a>)}
-              {author}
-              {` • ${age}`}
+            <div className="mx-1 flex">
+              {tags!.map((tag) => <a href={tag} className={`mx-px px-2 py-1 ${tagStyles[tag]}`}>{tag}</a>)}
+              <span className="text-green-600 font-800 ml-1 text-sm"><a href={`user/${author}/posts`}>{`${author}`}</a></span>
+              <span className="mx-1 text-slate-500 text-sm">• {age}</span>
             </div>
             <div>
             </div>
