@@ -13,13 +13,13 @@ type BluePostProps = Partial<{
 
 const BluePost = ({title, tags, author, age, href}: BluePostProps) => {
   return (
-      <div className="">
-        <div className="bg-slate-700 px-6 py-3 flex">
+      <div className="overflow-hidden">
+        <div className="bg-slate-700 min-h-auto px-6 py-3 flex">
           <div>
-            <img className="w-24 h-14 rounded-lg" src={questionMark} />
+            <img className="w-24 h-14 min-w-24 min-h-14 rounded-lg" src={questionMark} />
           </div>
           <div className="inline-block">
-            <div className="mx-2 font-500 text-white">
+            <div className="mx-2 font-500 text-white overflow-hidden">
               {title}
             </div>
             <div className="mx-1 flex">

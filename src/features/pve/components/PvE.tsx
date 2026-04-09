@@ -2,6 +2,7 @@ import mainLogo from "../../../assets/anima.png"
 import SearchBar from "../../../components/ui/SearchBar";
 import TABS from "../../../constants/tabs.ts"
 import BlueTracker from "../../blue-tracker/components/BlueTracker.tsx";
+import Tabs from "../../../components/ui/Tabs.tsx";
 
 const Pve = () => {
 
@@ -11,12 +12,12 @@ const Pve = () => {
       <img className="block mx-auto mt-45" width={375} src={mainLogo} />
       <p className="text-center text-sm text-gray-600">Ato Ata, chiguegue guata, ele eau'te e auta' eee ata oto</p>
       <div className="flex mt-15 items-center justify-center">
-        <SearchBar placeholder="esh-galakrond" searchbarStyling="w-2xl bg-primary-900 rounded-l-xl focus:ring-0 focus:border-1 border-1 border-primary-900" buttonText="🔎 Search"/>
+        <SearchBar placeholder="esh-galakrond" searchbarStyling="w-md lg:w-2xl bg-primary-900 rounded-l-xl focus:ring-0 focus:border-1 border-1 border-primary-900" buttonText="🔎 Search"/>
       </div>
-      <div className="flex justify-center items-center mt-5 gap-3">
-          {TABS.map(({icon, text, href}) => <a href={href} className="bg-primary-900 -transform-transition duration-300 hover:bg-primary-900/50 rounded-full px-4 py-1 text-white border border-neutral-500 ">{`${icon} ${text}`}</a>)}
-      </div>
-      <div>
+      <div className="flex mt-5 gap-3 justify-center flex-wrap lg:flex-nowrap">
+          {TABS.map(({icon, text, href}) => <Tabs icon={icon} text={text} href={href} />)}
+    </div>
+      <div className="">
         <BlueTracker />
       </div>
     </div>
