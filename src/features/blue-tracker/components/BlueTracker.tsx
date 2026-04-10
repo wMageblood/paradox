@@ -1,9 +1,6 @@
 import BluePost from "../../../components/ui/BluePost";
 import BLUE_POSTS from "../../../constants/bluePost";
 
-const innerWidth = window.innerWidth;
-
-
 const BlueTracker = () => {
   return (
     <div className="mx-25 rounded-sm">

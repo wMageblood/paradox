@@ -3,6 +3,8 @@ import SearchBar from "../../../components/ui/SearchBar";
 import TABS from "../../../constants/tabs.ts"
 import BlueTracker from "../../blue-tracker/components/BlueTracker.tsx";
 import Tabs from "../../../components/ui/Tabs.tsx";
+import Cards from "../../../components/ui/Cards.tsx"
+
 
 const Pve = () => {
 
@@ -16,9 +18,12 @@ const Pve = () => {
       </div>
       <div className="flex mt-5 gap-3 justify-center flex-wrap lg:flex-nowrap">
           {TABS.map(({icon, text, href}) => <Tabs icon={icon} text={text} href={href} />)}
-    </div>
+      </div>
       <div className="">
         <BlueTracker />
+      </div>
+      <div className="mt-5">
+        <Cards />
       </div>
     </div>
   );
